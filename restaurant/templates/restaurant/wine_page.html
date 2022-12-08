@@ -1,0 +1,192 @@
+{% load static %}
+{% block content %}
+<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = 'stylesheet' type = 'text/css' href = {% static 'restaurant/my_menu.css' %}>
+        <link rel = 'stylesheet' type = 'text/css' href = {% static 'restaurant/list_page.css' %}>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src={% static "..\static\restaurant\js\scroll.js" %}></script>
+        <title>Меню</title>
+    </head>
+    <script type="text/javascript">
+   var $root = $('html, body');
+
+$('a[href^="#"]').click(function () {
+    $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+
+    return false;
+});
+    </script>
+
+    
+    <title>Меню</title>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="header">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logotype">
+                            <a href="{% url 'show_menu' %}"><img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class='header__logo'></a>
+                        </div>
+                        <ul class="header__list">
+                            <a href="{% url 'show_menu' %}">На главную страницу</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class='list'>
+                <div class="container">
+                    <div class="list__top">
+                        <img src = "{% static '..\static\restaurant\images\beer.jpg' %}"/ class="list__promotion" width=350 height=175 alt="Фотография3">
+                        <form action = '{% url 'show_searched_wine' %}' method = 'post'>
+                            {% csrf_token %}
+                            <div class="list__field">
+                                <div class="div">
+                                    <input type ='text' class = 'list__input' name = 'search_box' placeholder = 'Найти блюдо'>
+                                </div>
+                                <div class="div">
+                                <button class = 'list__button' name = 'search_button'>Найти</button>
+                                </div>
+                            </div>    
+                        </form>
+                    </div>
+                    <div class="list__tag">
+                        <form action="{% url 'show_wine' wine_category=0 %}" method="post">
+                            {% csrf_token %}
+                            <button class = 'button_category' name = 'search_button'>ВСЕ</button>
+                        </form>
+                        <form action="{% url 'show_wine' wine_category=1 %}" method="post">
+                            {% csrf_token %}
+                            <button class = 'button_category' name = 'search_button'>ВИНО</button>
+                        </form>
+                        <form action="{% url 'show_wine' wine_category=2 %}" method="post">
+                            {% csrf_token %}
+                            <button class = 'button_category' name = 'search_button'>ШАМПАНСКОЕ</button>
+                        </form>
+                    </div>
+                    <div class="container">
+                    {% if wines %}
+                        {% if wine_category == 0 %}
+                            <div class="list__roll">
+                                {% for wine in wines %}
+                                    <div class = 'list__proposal'>
+                                        <img src="{{ wine.image.url }}" class='list__wine' id = 'book_image'>
+                                        <div class = 'list__info'>
+                                            <div class = 'list__name'>{{wine.name}}</div>
+                                            <div class = 'list__description'>{{wine.description}}</div>
+                                                <div class="list__row">
+                                                    <div class = 'list__price'>{{wine.price}} ₽</div>
+                                                    <div class = 'list__weight'>{{wine.amount}} мл</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        {% if wine_category == 1 %}
+                            <div class="list__roll">
+                                {% for wine in wines %}
+                                    {% if wine.sort == 'wine' %}
+                                    <div class = 'list__proposal'>
+                                        <img src="{{ wine.image.url }}" class='list__wine' id = 'book_image'>
+                                        <div class = 'list__info'>
+                                            <div class = 'list__name'>{{wine.name}}</div>
+                                            <div class = 'list__description'>{{wine.description}}</div>
+                                                <div class="list__row">
+                                                    <div class = 'list__price'>{{wine.price}} ₽</div>
+                                                    <div class = 'list__weight'>{{wine.amount}} г</div>
+                                            </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        {% if wine_category == 2 %}
+                            <div class="list__roll">
+                                {% for wine in wines %}
+                                    {% if wine.sort == 'shamp' %}
+                                    <div class = 'list__proposal'>
+                                        <img src="{{ wine.image.url }}" class='list__wine' id = 'book_image'>
+                                        <div class = 'list__info'>
+                                            <div class = 'list__name'>{{wine.name}}</div>
+                                            <div class = 'list__description'>{{wine.description}}</div>
+                                                <div class="list__row">
+                                                    <div class = 'list__price'>{{wine.price}} ₽</div>
+                                                    <div class = 'list__weight'>{{wine.amount}} г</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                    {% elif searched_wine %}
+                    <div class="list__roll">
+                        {% for wine in searched_wine %}
+                        <div class = 'list__proposal'>
+                            <img src="{{ wine.image.url }}" class='list__wine' id = 'book_image'>
+                            <div class = 'list__info'>
+                        <div class = 'list__name'>{{wine.name}}</div>
+                        <div class = 'list__description'>{{wine.description}}</div>
+                            <div class="list__row">
+                                <div class = 'list__price'>{{wine.price}} ₽</div>
+                                <div class = 'list__weight'>{{wine.amount}} мл</div>
+                            </div>
+                    </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="list__roll">
+                        <div class="list__unknown">
+                            По вашему запросу ничего не найдено
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>  
+        </div>
+        
+        <div class ='footer'>
+            <div class="container">
+                <div class = 'footer__row'>
+                    <div class="footer__partition">
+                        <div class="footer__flex">
+                            <div class="footer__logo">
+                                <img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class="footer__logo" alt="Фотография3" align="top">
+                            </div>
+                            <div class="footer__copy">
+                                <div class = 'footer__copyright'>
+                                    © 2013 - 2017. «БАЛКАНСКИЙ ДВОРИК»
+                                    Ресторан национальной кухни Англии "Munu"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__partition">
+                        <div class = 'footer__networks'>
+                            <a href='https://vk.com/ilay_57'><img src = "{% static '..\static\restaurant\images\vk_icon.png' %}"/  alt="Фотография3" align="top" class = 'vk_transition'></a>
+                            <a href='https://www.instagram.com/'><img src = "{% static '..\static\restaurant\images\insta_icon.png' %}"/ alt="Фотография3" align="top" class = 'insta_transition'></a>
+                            <a href='https://ru-ru.facebook.com/'><img src = "{% static '..\static\restaurant\images\facebook_icon.png' %}"/ alt="Фотография3" align="top" class = 'facebook_transition'></a>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+        </div>
+    </div>
+{% endblock %}

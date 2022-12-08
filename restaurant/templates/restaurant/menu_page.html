@@ -1,0 +1,299 @@
+{% load static %}
+{% block content %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' type = 'text/css' href = {% static 'restaurant/my_menu.css' %}>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src={% static "..\static\restaurant\js\scroll.js" %}></script>
+    <script type="text/javascript" src={% static "..\static\restaurant\js\error.js" %}></script>
+    <link rel="shortcut icon" href="{% static 'restaurant/images/favicon.ico' %}" />
+    <title>Меню</title>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="header">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logotype">
+                            <a href="{% url 'show_menu' %}"><img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class='header__logo'></a>
+                        </div>
+                        <div class="header__showed">
+                            <ul class="header__list">
+                                <a href="#about">О нас</a>
+                                <a href="#menu">Меню</a>
+                                <a href="#projects">Проекты</a>
+                                <a href="#contacts">Контакты</a>
+                            </ul>
+                        </div>
+                        <div class="header__hidden">
+                            <ul class="header__list">
+                                <div class="block">
+                                    <a href="#about" class="header__link">О нас</a>
+                                    <a href="#menu" class="header__link">Меню</a>
+                                </div>
+                                <div class="block">
+                                    <a href="#projects" class="header__link">Проекты</a>
+                                    <a href="#contacts" class="header__link">Контакты</a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='welcome'>
+                <div class="welcome__image">
+                    <div class="welcome__block">
+                        <div class="welcome__picture">
+                            <img src = "{% static '..\static\restaurant\images\interior.jpg' %}"/ class='welcome__main-image' alt="">
+                        </div>
+                        <img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class = 'welcome__logotype'>
+                        <img src = "{% static '..\static\restaurant\images\munu2.png' %}"/ class = 'welcome__name'>
+                        <form action="{% url 'show_reservation' %}" method="post">
+                            {% csrf_token %}
+                            <button type='submit' class = 'welcome__button' name='reservation_button'>БРОНИРОВАНИЕ</button>
+                        </form>
+                        <a href="#info" class="welcome__arrow">🡣</a>
+                    </div>
+                </div>
+            </div>
+
+        <a class = 'anchor_info' id='info'></a>
+            <div class='information'>
+                <div class='information__flex'>
+                    <div class="information__column">
+                        <img src = "{% static '..\static\restaurant\images\tele.png' %}"/ class="information__icon">
+                        <div class="information__description">
+                            <li>Телефон:</li>
+                            <li>8 (8342) 36-36-36</li>
+                            <li>+7 (937) 686-36-36</li>
+                        </div>
+                    </div>
+                    <div class='information__column'>
+                        <img src = "{% static '..\static\restaurant\images\time.png' %}"/ class="information__icon">
+                        <div class="information__description">
+                            <li>Время работы:</li>
+                            <li>Пн.-Сб.: 9:00 - 21:00</li>
+                            <li>Вс.: 8:00 - 23:00</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <a class = 'anchor_about' id="about"></a>
+        <div class="about">
+            <div class="container">
+                <hr>
+                <div class="about__block">
+                    <div class="about__section about__section_1">
+                        <img src = "{% static '..\static\restaurant\images\enter.jpg' %}"/ class='about__image'>
+                    </div>
+                    <div class="about__section about__section_2">
+                        <div class="about__title"><span class="about__position">О РЕСТОРАНЕ</span></div> 
+                        <div class="about__text">
+                            <div class="about__position">Munu («Муну») — ресторан английской национальной кухни, который одинаково хорошо подходит для спокойного семейного обеда, конфиденциальных деловых переговоров, торжеств любого уровня и душевного общения со старыми друзьями.
+                            Меню ресторана «Муну» на Олимпийском проспекте обширно, в нем представлена кухня Англии. Для удобства гостей все блюда маркированы значками «вегетарианское», «острое», «содержит орехи». Если вам сложно сделать выбор, официанты всегда расскажут о блюдах подробно, порекомендуют вам те или иные закуски, исходя из ваших вкусовых предпочтений. Все специи, которые «раскрашивают» блюда, придавая им неповторимый оригинальный вкус, доставляются из Англии. Широкое использование овощей, трав и специй позволяет готовить легкие, но при этом очень вкусные блюда, которые надолго дарят ощущение сытости без вреда для фигуры.</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a class = 'anchor_menu' id='menu'></a>
+        <div class="menu">
+            <div class = 'menu__block'>
+                <img src = "{% static '..\static\restaurant\images\food.jpg' %}"/ class='menu__image'>
+                <p class="menu__paragraph">НАЦИОНАЛЬНАЯ АНГЛИЙСКАЯ КУХНЯ РЕСТОРАНА - MUNU
+                <div class="menu__form">
+                    <div class="div">
+                        <form action="{% url 'show_food' %}" method='post'>
+                            {% csrf_token %}
+                            <button class="menu__button menu__button_menu">Меню</button>
+                        </form>
+                    </div>
+                    <div class="div">
+                        <form action="{% url 'show_wine' %}" method='post'>
+                            {% csrf_token %}
+                            <button class="menu__button menu__button_wine">Винная карта</button>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
+        <div class="about">
+            <div class="container">
+                <hr>
+                <div class="about__block">
+                    
+                    <div class="about__section about__section_2">
+                        <div class="about__title about__title_team"><span class="about__position">НАША КОМАНДА</span></div> 
+                        <div class="about__text about__text_team">
+                            <div class="about__position">Munu («Муну») — ресторан английской национальной кухни, который одинаково хорошо подходит для спокойного семейного обеда, конфиденциальных деловых переговоров, торжеств любого уровня и душевного общения со старыми друзьями.
+                            Меню ресторана «Муну» на Олимпийском проспекте обширно, в нем представлена кухня Англии. Для удобства гостей все блюда маркированы значками «вегетарианское», «острое», «содержит орехи». Если вам сложно сделать выбор, официанты всегда расскажут о блюдах подробно, порекомендуют вам те или иные закуски, исходя из ваших вкусовых предпочтений. Все специи, которые «раскрашивают» блюда, придавая им неповторимый оригинальный вкус, доставляются из Англии. Широкое использование овощей, трав и специй позволяет готовить легкие, но при этом очень вкусные блюда, которые надолго дарят ощущение сытости без вреда для фигуры.</div>
+                        </div>
+                    </div>
+                    <div class="about__section about__section_1">
+                        <img src = "{% static '..\static\restaurant\images\cock1.jpg' %}"/ class='about__image about__image_team'>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a class = 'anchor_projects' id='projects'></a>
+        <div class="projects">
+            <div class = 'projects__title'>
+                <img src = "{% static '..\static\restaurant\images\header_divider.svg' %}"/ class="projects__thumb" width= 50 height=50 alt="Фотография3" align="middle">
+                ПРОЕКТЫ
+                <img src = "{% static '..\static\restaurant\images\header_divider.svg' %}"/ class="projects__thumb" width= 50 height=50 alt="Фотография3" align="middle">
+            </div>
+
+            <div class="projects__row">
+                <div class="projects__outline">
+                    <div class="projects__item">
+                        <img src = "{% static '..\static\restaurant\images\vip.jpg' %}"/ class="projects__service" alt="Фотография1">
+                        <div class="projects__internal">
+                            <li class="projects__upper">VIP - КОМНАТА</li>
+                            <li class="projects__lower">Небольшой зал с уютной атмосферой, расчитанной на 20 человек</li>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projects__outline">
+                    <div class="projects__item">
+                        <div class="projects__frame">
+                            <img src = "{% static '..\static\restaurant\images\banquet.jpg' %}"/ class="projects__service" alt="Фотография2">
+                            <div class="projects__internal">
+                                <li class="projects__upper">БАНКЕТНЫЙ ЗАЛ</li>
+                                <li class="projects__lower">Дополнительный зал заведения для банкетов</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projects__outline">
+                    <div class="projects__item">
+                        <img src = "{% static '..\static\restaurant\images\bar.jpg' %}"/ class="projects__service" alt="Фотография3">
+                        <div class="projects__internal">
+                            <li class="projects__upper">БАР</li>
+                            <li class="projects__lower">Бар ресторана с большим количеством напитков</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            
+        </div>  
+        <a class = 'anchor_contacts' id='contacts'></a>
+            <div class="contacts">
+                <div class = 'background_contacts'>
+                <div class = 'header_projects'>
+                    <div class = 'contacts__title'>
+                        <img src = "{% static '..\static\restaurant\images\header_divider.svg' %}"/ class="projects__thumb" width= 50 height=50 alt="Фотография3" align="middle">
+                        КОНТАКТЫ
+                        <img src = "{% static '..\static\restaurant\images\header_divider.svg' %}"/ class="projects__thumb" width= 50 height=50 alt="Фотография3" align="middle">
+                    </div>
+                    
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.854222512986!2d37.57797621744385!3d55.746194599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b9db9fd6c33%3A0xdcdb7dd5e894287b!2z0KHQsNGF0LDQu9C40L0!5e0!3m2!1sru!2sru!4v1655442382379!5m2!1sru!2sru" class="contacts__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="container">
+                <div class = "contacts__section">
+                    <div class="contacts__place">
+                        <div class="contacts__inside-flex">
+                            <div class="contacts__column">
+                                <div class="contacts__card">
+                                    <img src = "{% static '..\static\restaurant\images\address.png' %}"/ class="contacts__picture contacts__picture_1" alt="Фотография3" align="top">
+                                    <span class="contacts__title address">АДРЕС:</span>
+                                    <div class="contacts__text">Москва, Смоленская улица., Дом 8, 121099</div>
+                                </div>
+                                <div class="contacts__card">
+                                    <img src = "{% static '..\static\restaurant\images\email.png' %}"/ class="contacts__picture contacts__picture_2" alt="Фотография3" align="top">
+                                    <span class="contacts__title email">ПОЧТА:</span><br>
+                                    <div class="contacts__text">izhelenkov@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="contacts__column info">
+                                <div class = 'info_contacts'>
+                                    Если Вы хотите посетить наше заведение, то Вам достаточно позвонить по телефонам, указанным выше, и заказать столик назвав дату, имя и количество гостей.
+                                    <p style='margin-top:1.5%;'></p>
+                                    Так же, для Вашего удобства, мы предлагаем Вам сделать предварительный заказ.
+                                    <p style='margin-top:27%;'></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__place">
+                        <div class="contacts__form">
+                            <div class = 'contacts__header'>
+                                ОБРАТНАЯ СВЯЗЬ
+                            </div>
+                            <div class = 'contacts__label'>
+                                У Вас есть к нам вопросы, предложения или отзывы о работе нашего <br>ресторана? Воспользуйтесь данной формой, и мы ответим на все, <br>интересующие Вас вопросы.
+                            </div>
+
+                            {% if anch == "1" %}
+                                <script>
+                                    Error()
+                                </script>
+                            {% endif %}
+                            
+                            <form action='{% url 'add_message' %}' method = 'post'>
+                                {% csrf_token %}
+                                <input type='text' class = 'contacts__form_input' name = 'name' placeholder='Введите ваше имя' required><br>
+                                <input type='text' class = 'contacts__form_input' name = 'telephone' placeholder='Введите номер телефона' required><br>
+                                <textarea class = 'contacts__form_box' name = 'message' placeholder='Введите комментарий' required></textarea>
+                                <button class = 'contacts__button'>Отправить</button>
+                            </form>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class ='footer'>
+            <div class="container">
+                <div class = 'footer__row'>
+                    <div class="footer__partition">
+                        <div class="footer__flex">
+                            <div class="footer__logo">
+                                <img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class="footer__logo" alt="Фотография3" align="top">
+                            </div>
+                            <div class="footer__copy">
+                                <div class = 'footer__copyright'>
+                                    © 2013 - 2017. «БАЛКАНСКИЙ ДВОРИК»
+                                    Ресторан национальной кухни Англии "Munu"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__partition">
+                        <div class = 'footer__networks'>
+                            <a href='https://vk.com/ilay_57'><img src = "{% static '..\static\restaurant\images\vk_icon.png' %}"/  alt="Фотография3" align="top" class = 'vk_transition'></a>
+                            <a href='https://www.instagram.com/'><img src = "{% static '..\static\restaurant\images\insta_icon.png' %}"/ alt="Фотография3" align="top" class = 'insta_transition'></a>
+                            <a href='https://ru-ru.facebook.com/'><img src = "{% static '..\static\restaurant\images\facebook_icon.png' %}"/ alt="Фотография3" align="top" class = 'facebook_transition'></a>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
+{% endblock %}

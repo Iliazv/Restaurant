@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' type = 'text/css' href = {% static 'restaurant/my_menu.css' %}>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src={% static "..\static\restaurant\js\scroll.js" %}></script>
+    <title>Меню</title>
+</head>
+
+
+<body>
+    <div class="wrapper reservation">
+        <div class="content">
+            <div class="header">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logotype">
+                            <a href="{% url 'show_menu' %}"><img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class='header__logo'></a>
+                        </div>
+                        <ul class="header__list option">
+                            <a href="{% url 'show_menu' %}">На главную страницу</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="container">
+                    <div class="form__title">Забронируйте столик онлайн</div>
+                    <form action="{% url 'add_reservation' %}" method="post">
+                        {% csrf_token %}
+                        <input type='text' class = 'form_input_box' name = 'FIO' placeholder='ФИО*' required>
+                        <input type='text' class = 'form_input_box' name = 'telephone' placeholder='Номер телефона*' required>
+                        <input type='text' class = 'form_input_box' name = 'email' placeholder='Почтовый адрес*' required>
+                        <input type='text' class = 'form_input_box' name = 'guests' placeholder='Количество гостей*' required>
+                        <input type='text' class = 'form_input_box' name = 'time' placeholder='Время*' required>
+                        <textarea class = 'form_text_box' name = 'comment' placeholder='Комментарий'></textarea>
+                        <button type = 'submit' class = 'form_button'>Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class ='footer'>
+            <div class="container">
+                <div class = 'footer__row'>
+                    <div class="footer__partition">
+                        <div class="footer__flex">
+                            <div class="footer__logo">
+                                <img src = "{% static '..\static\restaurant\images\munu.png' %}"/ class="footer__logo" alt="Фотография3" align="top">
+                            </div>
+                            <div class="footer__copy">
+                                <div class = 'footer__copyright'>
+                                    © 2013 - 2017. «БАЛКАНСКИЙ ДВОРИК»
+                                    Ресторан национальной кухни Англии "Munu"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__partition">
+                        <div class = 'footer__networks'>
+                            <a href='https://vk.com/ilay_57'><img src = "{% static '..\static\restaurant\images\vk_icon.png' %}"/  alt="Фотография3" align="top" class = 'vk_transition'></a>
+                            <a href='https://www.instagram.com/'><img src = "{% static '..\static\restaurant\images\insta_icon.png' %}"/ alt="Фотография3" align="top" class = 'insta_transition'></a>
+                            <a href='https://ru-ru.facebook.com/'><img src = "{% static '..\static\restaurant\images\facebook_icon.png' %}"/ alt="Фотография3" align="top" class = 'facebook_transition'></a>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
