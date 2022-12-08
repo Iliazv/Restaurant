@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0257)https://code.bookbanket.ru/dev/widget.html?a=310219&ym_uid=1655307017222523800&ua=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F102.0.5005.63%20Safari%2F537.36&domain=balkan-dvorik.ru -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Виджет"><link rel="icon" href="https://code.bookbanket.ru/dev/favicon.ico"><title>Виджет</title><link href="https://code.bookbanket.ru/dev/widget/css/chunk-e8eb45d2.a8d3981e.css" rel="prefetch"><link href="./chunk-060cb8e6.c3b92ff6.js.Без названия" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/js/chunk-1bb00d29.b1cee567.js" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/js/chunk-5078a51a.caf6be63.js" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/js/chunk-e8eb45d2.8e7ec396.js" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/css/app.f269f2cb.css" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/css/chunk-e8eb45d2.a8d3981e.css" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/css/chunk-vendors.6e072cd1.css" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/fonts/p22_underground_cy_pro_book.woff2" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/fonts/p22_underground_cy_pro_demi.woff2" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/fonts/p22_underground_cy_pro_light.woff2" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/arrow-left.417dc04e.svg" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/arrow-top.b94c63fe.svg" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/arrow.487562a5.svg" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/arrow2.6568f302.svg" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/loupe.0046994d.svg" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/question.9e855065.svg" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/img/triangle.3137ee74.svg" rel="prefetch"><link href="./app.99c52689.js.Без названия" rel="prefetch"><link href="./chunk-060cb8e6.c3b92ff6.js.Без названия" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/js/chunk-1bb00d29.b1cee567.js" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/js/chunk-5078a51a.caf6be63.js" rel="prefetch"><link href="https://code.bookbanket.ru/dev/widget/js/chunk-e8eb45d2.8e7ec396.js" rel="prefetch"><link href="./chunk-vendors.ffb727f4.js.Без названия" rel="prefetch"><style>
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}a{background-color:transparent}strong{font-weight:bolder}button,input{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button{text-transform:none}[type=submit],button{-webkit-appearance:button}[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+</style>
+<link href="./chunk-vendors.6e072cd1.ecd470bb.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+<noscript><link href="widget/css/chunk-vendors.6e072cd1.ecd470bb.css" rel="stylesheet"></noscript><link href="./app.f269f2cb.7d8276e1.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+<noscript><link href="widget/css/app.f269f2cb.7d8276e1.css" rel="stylesheet"></noscript><script charset="utf-8" src="./chunk-060cb8e6.c3b92ff6.js.Без названия"></script><style type="text/css">.rtl {
+  direction: rtl;
+}
+.vdp-datepicker {
+  position: relative;
+  text-align: left;
+}
+.vdp-datepicker * {
+  box-sizing: border-box;
+}
+.vdp-datepicker__calendar {
+  position: absolute;
+  z-index: 100;
+  background: #fff;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+.vdp-datepicker__calendar header {
+  display: block;
+  line-height: 40px;
+}
+.vdp-datepicker__calendar header span {
+  display: inline-block;
+  text-align: center;
+  width: 71.42857142857143%;
+  float: left;
+}
+.vdp-datepicker__calendar header .prev,
+.vdp-datepicker__calendar header .next {
+  width: 14.285714285714286%;
+  float: left;
+  text-indent: -10000px;
+  position: relative;
+}
+.vdp-datepicker__calendar header .prev:after,
+.vdp-datepicker__calendar header .next:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 6px solid transparent;
+}
+.vdp-datepicker__calendar header .prev:after {
+  border-right: 10px solid #000;
+  margin-left: -5px;
+}
+.vdp-datepicker__calendar header .prev.disabled:after {
+  border-right: 10px solid #ddd;
+}
+.vdp-datepicker__calendar header .next:after {
+  border-left: 10px solid #000;
+  margin-left: 5px;
+}
+.vdp-datepicker__calendar header .next.disabled:after {
+  border-left: 10px solid #ddd;
+}
+.vdp-datepicker__calendar header .prev:not(.disabled),
+.vdp-datepicker__calendar header .next:not(.disabled),
+.vdp-datepicker__calendar header .up:not(.disabled) {
+  cursor: pointer;
+}
+.vdp-datepicker__calendar header .prev:not(.disabled):hover,
+.vdp-datepicker__calendar header .next:not(.disabled):hover,
+.vdp-datepicker__calendar header .up:not(.disabled):hover {
+  background: #eee;
+}
+.vdp-datepicker__calendar .disabled {
+  color: #ddd;
+  cursor: default;
+}
+.vdp-datepicker__calendar .flex-rtl {
+  display: flex;
+  width: inherit;
+  flex-wrap: wrap;
+}
+.vdp-datepicker__calendar .cell {
+  display: inline-block;
+  padding: 0 5px;
+  width: 14.285714285714286%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+}
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day,
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month,
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year {
+  cursor: pointer;
+}
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,
+.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {
+  border: 1px solid #4bd;
+}
+.vdp-datepicker__calendar .cell.selected {
+  background: #4bd;
+}
+.vdp-datepicker__calendar .cell.selected:hover {
+  background: #4bd;
+}
+.vdp-datepicker__calendar .cell.selected.highlighted {
+  background: #4bd;
+}
+.vdp-datepicker__calendar .cell.highlighted {
+  background: #cae5ed;
+}
+.vdp-datepicker__calendar .cell.highlighted.disabled {
+  color: #a3a3a3;
+}
+.vdp-datepicker__calendar .cell.grey {
+  color: #888;
+}
+.vdp-datepicker__calendar .cell.grey:hover {
+  background: inherit;
+}
+.vdp-datepicker__calendar .cell.day-header {
+  font-size: 75%;
+  white-space: nowrap;
+  cursor: inherit;
+}
+.vdp-datepicker__calendar .cell.day-header:hover {
+  background: inherit;
+}
+.vdp-datepicker__calendar .month,
+.vdp-datepicker__calendar .year {
+  width: 33.333%;
+}
+.vdp-datepicker__clear-button,
+.vdp-datepicker__calendar-button {
+  cursor: pointer;
+  font-style: normal;
+}
+.vdp-datepicker__clear-button.disabled,
+.vdp-datepicker__calendar-button.disabled {
+  color: #999;
+  cursor: default;
+}
+
+/*# sourceURL=Datepicker.vue */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkRhdGVwaWNrZXIudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBYztBQUNoQjtBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0Usc0JBQXNCO0FBQ3hCO0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osc0JBQXNCO0FBQ3hCO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLHlCQUF5QjtFQUN6QixXQUFXO0FBQ2I7QUFDQTs7RUFFRSwwQkFBMEI7RUFDMUIsV0FBVztFQUNYLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7QUFDQTs7RUFFRSxXQUFXO0VBQ1gsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxRQUFRO0VBQ1IsNENBQTRDO0VBQzVDLDZCQUE2QjtBQUMvQjtBQUNBO0VBQ0UsNkJBQTZCO0VBQzdCLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsNkJBQTZCO0FBQy9CO0FBQ0E7RUFDRSw0QkFBNEI7RUFDNUIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSw0QkFBNEI7QUFDOUI7QUFDQTs7O0VBR0UsZUFBZTtBQUNqQjtBQUNBOzs7RUFHRSxnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLFdBQVc7RUFDWCxlQUFlO0FBQ2pCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsY0FBYztFQUNkLGVBQWU7QUFDakI7QUFDQTtFQUNFLHFCQUFxQjtFQUNyQixjQUFjO0VBQ2QsMEJBQTBCO0VBQzFCLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0Qiw2QkFBNkI7QUFDL0I7QUFDQTs7O0VBR0UsZUFBZTtBQUNqQjtBQUNBOzs7RUFHRSxzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjtBQUNBO0VBQ0UsY0FBYztBQUNoQjtBQUNBO0VBQ0UsV0FBVztBQUNiO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckI7QUFDQTtFQUNFLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIsZUFBZTtBQUNqQjtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7O0VBRUUsY0FBYztBQUNoQjtBQUNBOztFQUVFLGVBQWU7RUFDZixrQkFBa0I7QUFDcEI7QUFDQTs7RUFFRSxXQUFXO0VBQ1gsZUFBZTtBQUNqQiIsImZpbGUiOiJEYXRlcGlja2VyLnZ1ZSIsInNvdXJjZXNDb250ZW50IjpbIi5ydGwge1xuICBkaXJlY3Rpb246IHJ0bDtcbn1cbi52ZHAtZGF0ZXBpY2tlciB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cbi52ZHAtZGF0ZXBpY2tlciAqIHtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHotaW5kZXg6IDEwMDtcbiAgYmFja2dyb3VuZDogI2ZmZjtcbiAgd2lkdGg6IDMwMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbGluZS1oZWlnaHQ6IDQwcHg7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciBzcGFuIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiA3MS40Mjg1NzE0Mjg1NzE0MyU7XG4gIGZsb2F0OiBsZWZ0O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLnByZXYsXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAubmV4dCB7XG4gIHdpZHRoOiAxNC4yODU3MTQyODU3MTQyODYlO1xuICBmbG9hdDogbGVmdDtcbiAgdGV4dC1pbmRlbnQ6IC0xMDAwMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAucHJldjphZnRlcixcbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgaGVhZGVyIC5uZXh0OmFmdGVyIHtcbiAgY29udGVudDogJyc7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogNTAlO1xuICB0b3A6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpIHRyYW5zbGF0ZVkoLTUwJSk7XG4gIGJvcmRlcjogNnB4IHNvbGlkIHRyYW5zcGFyZW50O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLnByZXY6YWZ0ZXIge1xuICBib3JkZXItcmlnaHQ6IDEwcHggc29saWQgIzAwMDtcbiAgbWFyZ2luLWxlZnQ6IC01cHg7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAucHJldi5kaXNhYmxlZDphZnRlciB7XG4gIGJvcmRlci1yaWdodDogMTBweCBzb2xpZCAjZGRkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLm5leHQ6YWZ0ZXIge1xuICBib3JkZXItbGVmdDogMTBweCBzb2xpZCAjMDAwO1xuICBtYXJnaW4tbGVmdDogNXB4O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLm5leHQuZGlzYWJsZWQ6YWZ0ZXIge1xuICBib3JkZXItbGVmdDogMTBweCBzb2xpZCAjZGRkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLnByZXY6bm90KC5kaXNhYmxlZCksXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAubmV4dDpub3QoLmRpc2FibGVkKSxcbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgaGVhZGVyIC51cDpub3QoLmRpc2FibGVkKSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgaGVhZGVyIC5wcmV2Om5vdCguZGlzYWJsZWQpOmhvdmVyLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciBoZWFkZXIgLm5leHQ6bm90KC5kaXNhYmxlZCk6aG92ZXIsXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIGhlYWRlciAudXA6bm90KC5kaXNhYmxlZCk6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiAjZWVlO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuZGlzYWJsZWQge1xuICBjb2xvcjogI2RkZDtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuZmxleC1ydGwge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogaW5oZXJpdDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogMCA1cHg7XG4gIHdpZHRoOiAxNC4yODU3MTQyODU3MTQyODYlO1xuICBoZWlnaHQ6IDQwcHg7XG4gIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHRyYW5zcGFyZW50O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS5kYXksXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsOm5vdCguYmxhbmspOm5vdCguZGlzYWJsZWQpLm1vbnRoLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS55ZWFyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS5kYXk6aG92ZXIsXG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsOm5vdCguYmxhbmspOm5vdCguZGlzYWJsZWQpLm1vbnRoOmhvdmVyLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbDpub3QoLmJsYW5rKTpub3QoLmRpc2FibGVkKS55ZWFyOmhvdmVyIHtcbiAgYm9yZGVyOiAxcHggc29saWQgIzRiZDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLmNlbGwuc2VsZWN0ZWQge1xuICBiYWNrZ3JvdW5kOiAjNGJkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5zZWxlY3RlZDpob3ZlciB7XG4gIGJhY2tncm91bmQ6ICM0YmQ7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsLnNlbGVjdGVkLmhpZ2hsaWdodGVkIHtcbiAgYmFja2dyb3VuZDogIzRiZDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLmNlbGwuaGlnaGxpZ2h0ZWQge1xuICBiYWNrZ3JvdW5kOiAjY2FlNWVkO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5oaWdobGlnaHRlZC5kaXNhYmxlZCB7XG4gIGNvbG9yOiAjYTNhM2EzO1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5ncmV5IHtcbiAgY29sb3I6ICM4ODg7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5jZWxsLmdyZXk6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiBpbmhlcml0O1xufVxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhciAuY2VsbC5kYXktaGVhZGVyIHtcbiAgZm9udC1zaXplOiA3NSU7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIGN1cnNvcjogaW5oZXJpdDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLmNlbGwuZGF5LWhlYWRlcjpob3ZlciB7XG4gIGJhY2tncm91bmQ6IGluaGVyaXQ7XG59XG4udmRwLWRhdGVwaWNrZXJfX2NhbGVuZGFyIC5tb250aCxcbi52ZHAtZGF0ZXBpY2tlcl9fY2FsZW5kYXIgLnllYXIge1xuICB3aWR0aDogMzMuMzMzJTtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2xlYXItYnV0dG9uLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhci1idXR0b24ge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbi52ZHAtZGF0ZXBpY2tlcl9fY2xlYXItYnV0dG9uLmRpc2FibGVkLFxuLnZkcC1kYXRlcGlja2VyX19jYWxlbmRhci1idXR0b24uZGlzYWJsZWQge1xuICBjb2xvcjogIzk5OTtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuIl19 */</style></head><body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed=""><noscript><strong>К сожалению, виджет не работает без JavaScript.</strong></noscript>
+<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script><div id="app"><div data-v-3a545f97="" class="modal-mask" style=""><div data-v-3a545f97="" class="inner"><span data-v-3a545f97="" class="close">✕</span><div><section data-v-2d429d10="" class="layout"><aside data-v-2d429d10="" class="left"><div data-v-2d429d10="" class="datePickerWrapper noQuota"><div data-v-41de4aea="" class="vdp-datepicker datepicker" value="Sun May 01 2022 12:34:27 GMT+0700 (GMT+07:00)" disableddates="[object Object]"><div class=""><!----> <input type="hidden" name="datepicker" readonly="readonly" autocomplete="off" value="01 Май 2022"> <!----> </div> <div class="vdp-datepicker__calendar" style="position: static;"> <header><span class="prev">&lt;</span> <span class="day__month_btn up">Май 2022</span> <span class="next">&gt;</span></header> <div class=""><span class="cell day-header">Пн</span><span class="cell day-header">Вт</span><span class="cell day-header">Ср</span><span class="cell day-header">Чт</span><span class="cell day-header">Пт</span><span class="cell day-header">Сб</span><span class="cell day-header">Вс</span> <span class="cell day blank"></span><span class="cell day blank"></span><span class="cell day blank"></span><span class="cell day blank"></span><span class="cell day blank"></span><span class="cell day blank"></span><span class="cell day selected weekend sun">1</span><span class="cell day">2</span><span class="cell day">3</span><span class="cell day">4</span><span class="cell day">5</span><span class="cell day">6</span><span class="cell day weekend sat">7</span><span class="cell day weekend sun">8</span><span class="cell day">9</span><span class="cell day">10</span><span class="cell day">11</span><span class="cell day">12</span><span class="cell day">13</span><span class="cell day weekend sat">14</span><span class="cell day weekend sun">15</span><span class="cell day">16</span><span class="cell day">17</span><span class="cell day">18</span><span class="cell day">19</span><span class="cell day">20</span><span class="cell day weekend sat">21</span><span class="cell day weekend sun">22</span><span class="cell day">23</span><span class="cell day">24</span><span class="cell day">25</span><span class="cell day">26</span><span class="cell day">27</span><span class="cell day weekend sat">28</span><span class="cell day weekend sun">29</span><span class="cell day">30</span><span class="cell day">31</span></div></div> <div class="vdp-datepicker__calendar" style="position: static; display: none;"> <header><span class="prev">&lt;</span> <span class="month__year_btn up">2022</span> <span class="next">&gt;</span></header> <span class="cell month">Январь</span><span class="cell month">Февраль</span><span class="cell month">Март</span><span class="cell month">Апрель</span><span class="cell month selected">Май</span><span class="cell month">Июнь</span><span class="cell month">Июль</span><span class="cell month">Август</span><span class="cell month">Сентябрь</span><span class="cell month">Октябрь</span><span class="cell month">Ноябрь</span><span class="cell month">Декабрь</span></div> <div class="vdp-datepicker__calendar" style="position: static; display: none;"> <header><span class="prev">&lt;</span> <span>2020 - 2029</span> <span class="next">&gt;</span></header> <span class="cell year">2020</span><span class="cell year">2021</span><span class="cell year selected">2022</span><span class="cell year">2023</span><span class="cell year">2024</span><span class="cell year">2025</span><span class="cell year">2026</span><span class="cell year">2027</span><span class="cell year">2028</span><span class="cell year">2029</span></div></div><!----></div><main data-v-7d2f5ec5="" class="annonce note" data-v-2d429d10=""><header data-v-7d2f5ec5="" class="header"><h2 data-v-7d2f5ec5="" class="isBusy">01.05.2022 - Дата занята</h2></header><section data-v-7d2f5ec5="" class="section"><strong data-v-7d2f5ec5="">Условия на 01.05.2022</strong><main data-v-2c247501="" class="description" data-v-7d2f5ec5=""><p>Средний чек: 1200 руб.</p><p>Аренда: 0 руб.</p></main></section><footer data-v-7d2f5ec5="" class="footer"><a data-v-7d2f5ec5="" href="javascript:void(0)">Посмотреть цены и акции</a></footer></main><button class="baseButton popupTrigger" type="submit" data-v-2d429d10=""><span>Посмотреть весь календарь</span></button><!----><div data-v-2d429d10="" class="copyright">Мы используем <a data-v-2d429d10="" href="https://www.bookbanket.ru/" target="_blank" rel="noopener">BookBanket</a></div></aside><aside data-v-2d429d10="" class="right"><div data-v-2d429d10="" class="reg"><div data-v-2d429d10="" class="phantom"><div data-v-41de4aea="" class="vdp-datepicker datepicker datePickerWrapper" value="1654061667485" disabled="disabled"><div class=""><!----> <input type="hidden" name="datepicker" disabled="disabled" readonly="readonly" autocomplete="off" value="01 Июнь 2022"> <!----> </div> <div class="vdp-datepicker__calendar" style="position: static;"> <header><span class="prev">&lt;</span> <span class="day__month_btn up">Июнь 2022</span> <span class="next">&gt;</span></header> <div class=""><span class="cell day-header">Пн</span><span class="cell day-header">Вт</span><span class="cell day-header">Ср</span><span class="cell day-header">Чт</span><span class="cell day-header">Пт</span><span class="cell day-header">Сб</span><span class="cell day-header">Вс</span> <span class="cell day blank"></span><span class="cell day blank"></span><span class="cell day selected">1</span><span class="cell day">2</span><span class="cell day">3</span><span class="cell day weekend sat">4</span><span class="cell day weekend sun">5</span><span class="cell day">6</span><span class="cell day">7</span><span class="cell day">8</span><span class="cell day">9</span><span class="cell day">10</span><span class="cell day weekend sat">11</span><span class="cell day weekend sun">12</span><span class="cell day">13</span><span class="cell day">14</span><span class="cell day">15</span><span class="cell day">16</span><span class="cell day today">17</span><span class="cell day weekend sat">18</span><span class="cell day weekend sun">19</span><span class="cell day">20</span><span class="cell day">21</span><span class="cell day">22</span><span class="cell day">23</span><span class="cell day">24</span><span class="cell day weekend sat">25</span><span class="cell day weekend sun">26</span><span class="cell day">27</span><span class="cell day">28</span><span class="cell day">29</span><span class="cell day">30</span></div></div> <div class="vdp-datepicker__calendar" style="position: static; display: none;"> <header><span class="prev">&lt;</span> <span class="month__year_btn up">2022</span> <span class="next">&gt;</span></header> <span class="cell month">Январь</span><span class="cell month">Февраль</span><span class="cell month">Март</span><span class="cell month">Апрель</span><span class="cell month">Май</span><span class="cell month selected">Июнь</span><span class="cell month">Июль</span><span class="cell month">Август</span><span class="cell month">Сентябрь</span><span class="cell month">Октябрь</span><span class="cell month">Ноябрь</span><span class="cell month">Декабрь</span></div> <div class="vdp-datepicker__calendar" style="position: static; display: none;"> <header><span class="prev">&lt;</span> <span>2020 - 2029</span> <span class="next">&gt;</span></header> <span class="cell year">2020</span><span class="cell year">2021</span><span class="cell year selected">2022</span><span class="cell year">2023</span><span class="cell year">2024</span><span class="cell year">2025</span><span class="cell year">2026</span><span class="cell year">2027</span><span class="cell year">2028</span><span class="cell year">2029</span></div></div></div><form action="https://code.bookbanket.ru/" method="get" novalidate="novalidate" class="formRegistration form" data-v-2d429d10=""><span class="formRegistration__suptitle"></span><h2 class="formRegistration__title">Получите доступ к <br> датам и условиям онлайн</h2><span class="formRegistration__subtitle">Регистрация в 1 клик</span><label for="phone" class="formRegistration__label">Ваш телефон</label><div class="baseInput formRegistration__input"><input placeholder="8 (___) ___ - __ - __" autocomplete="off" name="phone" id="phone" type="tel" class="baseInput__field"></div><span class="formRegistration__inputDescription">Без рассылок и спама</span><button class="baseButton formRegistration__submit" type="submit">Получить доступ</button><div class="formRules">Нажимая «Получить доступ», вы принимаете следующие <a href="https://in.bookbanket.ru/new/terms/?a=310219" target="_blank" rel="noopener">условия использования.</a></div><div class="formRegistration__overlay" style="display: none;"></div></form></div><!----><!----><!----></aside></section><!----></div></div></div></div><script src="./chunk-vendors.ffb727f4.js.Без названия"></script><script src="./app.99c52689.js.Без названия"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

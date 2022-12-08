@@ -1,0 +1,20 @@
+var RSFormProReCAPTCHAv2 = {
+	forms: {},
+	loaders: [],
+	onLoad: function() {
+		window.setTimeout(function(){
+			for (var i = 0; i < RSFormProReCAPTCHAv2.loaders.length; i++) {
+				var func = RSFormProReCAPTCHAv2.loaders[i];
+				if (typeof func === 'function') {
+					try {
+						func();
+					} catch (err) {
+						if (console && typeof console.log === 'function') {
+							console.log(err);
+						}
+					}
+				}
+			}
+		}, 500);
+	}
+};
